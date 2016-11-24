@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/reset.css">
+<title>Huangxy</title>
+<style>
+html {
+	width:100%;
+	height:100%;
+}
+body {
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.main {	
+	position:fixed;
+	left:0;
+	top:0;
+	width: 100%;
+    height: 100%;	
+}
+.site-home {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/*背景*/
+.mask{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:rgba(0, 94, 160, 0.2);
+}
+.home-video{
+	min-height: 100%;
+    min-width: 100%;
+    max-width: none;
+    height: auto;
+    width: auto;
+	background:transparent  url(../img/IMG_4117.JPG) 50% 50% no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+/*中间的文本*/
+.text {
+	position:absolute;
+	left:50%;
+	top:60%;
+	z-index:10;
+	width:100%;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);	
+	color:#fff;
+	text-align:center;
+}
+.text p{
+	margin-top:30px;
+	font-size:20px;
+	padding-left:220px;
+}
+.text-H,
+.text-con{
+	min-width: 36px;
+	height:180px;
+	font-size:160px;
+	line-height:180px;
+	display: inline-block;
+	text-align:center;
+	transition: all 0.5s;
+}
+.text a{
+	display:block;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+
+.text-con:hover {
+	min-width:180px;
+	background-color:rgba(0,0,0,0.2);
+	transition: all 0.5s;
+	border:1px dashed #fff;
+
+}
+
+.text-H{
+	position:relative;
+	width:180px;
+	height:180px;
+	margin-right:30px;
+	border-radius:50%;
+	text-align:center;
+	line-height:180px;
+	border:1px dashed #fff;
+	background-color:rgba(0,0,0,0.2);
+}
+.text-H:before{
+	position:absolute;
+	content:'';
+	top:50%;
+	left:50%;
+	width:60%;
+	height:60%;
+	transition: all 0.5s;
+	
+	border:1px dashed #fff;
+	background-color:rgba(255,255,255,0.2);
+	border-radius:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	
+}
+.text-H:hover:before{
+	width:95%;
+	height:95%;
+	transition: all 0.5s;
+}
+/*导航栏*/
+.main-nav{
+	position:absolute;
+	top:80%;
+	left:50%;
+	text-align:center;
+	transform:translate(-80%,-50%);
+}
+.main-nav li{
+	display:inline-block;
+	padding:20px;
+	cursor:pointer;
+	border:0;
+	transition: all 0.8s;
+}
+.main-nav li a{
+	font-size:16px;
+	font-weight:bold;
+	color:#fff;
+	text-decoration:none;
+}
+.main-nav li:hover {
+	border:1px dashed #fff;
+	transtion:all .8s; 
+}
+/*导航2*/
+.nav {
+	position:absolute;
+	top:0;
+	left:50%;
+	text-align:center;
+	transform:translate(0,-50%);
+	margin-left:-43px;
+}
+.nav .nav-con {
+	position:relative;
+}
+.nav .btn1 {
+	position:absolute;
+	top:0;
+	width:86px;
+	height:50px;
+	font-size:18px;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+	background:rgba(0,0,0,.3);
+	cursor:pointer;
+}
+.nav ul li {
+	position:absolute;
+	top:0;
+	left:12px;
+	transform:translate(0,0);
+	transition:all .8s;
+	visibility:hidden;
+		
+}
+.nav ul li a {
+	display:block;
+	width:60px;
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	font-size:16px;
+	text-decoration:none;
+	color:#fff;
+	border-radius:50%;
+	background:rgba(0,0,0,0.2);
+}
+.nav ul li.active{
+	visibility:visible;
+}
+.nav ul li.active.a1 {
+	transform:translate(300%,0);
+	transition:all .8s;
+}
+.nav ul li.active.a2 {
+	transform:translate(-300%,0);
+	transition:all .8s;
+}
+.nav ul li.active.a3 {
+	transform:translate(0,150%);
+	transition:all .8s;
+}
+.nav ul li.active.a4 {
+	transform:translate(170%,120%);
+	transition:all .8s;
+}
+.nav ul li.active.a5 {
+	transform:translate(-170%,120%);
+	transition:all .8s;
+}
+@media (max-width:767px){
+	.text-l,
+	.text-a,
+	.text-t,
+	.text-e,
+	.text-r{
+		font-size:100px;
+		line-height:120px;
+		height:120px;
+	}
+	.text-l:hover,
+	.text-a:hover,
+	.text-t:hover,
+	.text-e:hover,
+	.text-r:hover{
+		min-width:120px;
+	
+	}
+	.text-y{
+		display:block;
+		clear: both;
+		margin:0 auto;
+	}
+	.text p{
+		padding:0;
+	}
+	
+	.main-nav{
+		width:100%;
+		bottom:0;
+		left:0;
+		top:auto;
+		transform: translate(0);
+		background-color:rgba(0,0,0,0.2);
+	}
+	.main-nav li{
+		padding:10px 15px;
+	}
+}
+
+
+</style>
+</head>
+
+<body>
+<div class="main">
+	<div class="site-home">
+    	<div class="mask"></div>
+        <video autoplay  loop preload="auto" poster="img/IMG_4117.JPG" class="home-video">
+            <source src="../media/ylater.mp4"/>
+            <source src="../media/ylater.webm"/>
+       </video>
+        <div class="text">
+        	<div class="text-H">
+            	<a >H</a>
+            </div>
+            <div class="text-con">
+            	<a>u</a>
+            </div>
+            <div class="text-con">
+ 	           	<a>a</a>
+            </div>
+            <div class="text-con">
+            	<a>n</a>
+            </div>
+            <div class="text-con">
+            	<a>g</a>
+            </div>
+            <div class="text-con">
+            	<a>x</a>
+            </div>
+            <div class="text-con">
+            	<a>y</a>
+            </div>
+            <p>---------- 奇迹只会降临在不言放弃的人身上，不要小看奇迹</p>
+        </div>
+      
+        <div class="nav">
+            <div class="nav-con">
+                <div class="btn1">Menu<div>
+                <ul class="menu-list">
+                    <li class="a1"><a  href="">网页</a></li>
+                    <li class="a2"><a  href="">APP</a></li>
+                    <li class="a3"><a  href="design.html">设计</a></li>
+                    <li class="a4"><a  href="">图标</a></li>
+                    <li class="a5"><a  href="">生活</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	 $(".btn1").click(function(){
+		 $(".menu-list li").toggleClass("active");
+	}); 
+});
+</script>
+</body>
+</html>

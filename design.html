@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="" name="content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/style1.css">
+<title>Design</title>
+</head>
+<body>
+<div class="page-site">
+    <header class="page-header">
+    	<div class="menu-toggle">
+        	<span></span>
+        </div>
+    	<div class="logo">Huangxy</div>
+        <ul class="nav-menu">
+        	<li><a href="index.html"><i class="fa fa-home"></i>我的首页 / My home</a></li>
+            <li><a class="active"><i class="fa fa-diamond"></i>设计 / Web & UI</a></li>
+            <li><a><i class="fa fa-desktop"></i>前端 / Html5 & Css3</a></li>
+            <li><a><i class="fa fa-camera"></i>摄影 / photograph</a></li>
+            <li><a><i class="fa fa-film"></i>电影 / Storys</a></li>
+            <li><a><i class="fa fa-music"></i>音乐 / Mood</a></li>
+        </ul>
+    </header>
+    <div class="page-content">
+    
+        <div class="grid">
+        	<div class="grid-item">
+            	<img src="../img/IMG_4117.JPG"/>
+                <p>多年后，我在街角的咖啡店，遇到逛街的你。</p>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4032.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4117.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4030.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4033.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4113.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4030.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4033.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4113.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4121.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4112.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4121.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4112.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4032.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4117.JPG"/>
+                <p>多年后，我在街角的咖啡店，遇到逛街的你。</p>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4032.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4117.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4030.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4033.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4113.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4030.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4033.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4113.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4121.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4112.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4121.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4112.JPG"/>
+            </div>
+            <div class="grid-item">
+            	<img src="../img/IMG_4032.JPG"/>
+            </div>
+        </div>
+        
+    </div>
+     <footer class="page-footer text-center">
+        <p>联系我：</p>
+        <p>姓名：黄小勇</p>
+        <p>Tel:15750758656</p>
+        <p>QQ:295965400</p>
+        <p>Email:295965400@qq.com</p>
+        <p>住址：厦门市湖里区</p>
+    </footer>
+</div>   
+    
+<style>
+	.name-card{
+		-webkit-transform:rotateY(360deg);
+		    -ms-transform:rotateY(180deg);
+		    -ms-transform:rotateY(180deg);
+		     -o-transform:rotateY(180deg);
+		        transform:rotateY(180deg);
+	}
+</style>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+	//响应式导航设计
+	$(".menu-toggle ").click(function(){
+		$(this).toggleClass("toggled");
+		$(".nav-menu").toggleClass("open");
+		$(".page-content").toggleClass("blur");
+		$(".page-footer").toggleClass("blur");
+	})
+	
+	//瀑布流插件初始化
+	$('.grid').masonry({
+	  // options
+	  itemSelector: '.grid-item',
+	 // gutter: 20,
+	  isAnimated: true,
+	  
+	});
+</script>
+</body>
+</html>
