@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	position:relative;
+	background-color:#f5f5f5;
+}
+.grid-item p {
+    padding: 5px;
+}
+p {
+    font-size: 14px;
+    line-height: 25px;
+}
+.page-site {
+	position:relative;
+	width:100%;
+}
+.page-header {
+	position:fixed;
+	width:270px;
+	height:100%;
+	padding:20px;
+	z-index:1000;	
+}
+.logo {
+	width:100%;
+	font-size:60px;
+	padding-bottom:20px;
+}
+.nav-menu {
+	padding-top:20px;
+}
+.nav-menu li {
+	padding:15px 0;
+	font-size:16px;
+}
+
+.nav-menu i {
+	display:inline-block;
+	margin-right:15px;
+}
+
+.nav-menu a {
+	display:block;
+	padding-bottom:5px;
+	position:relative;
+	border: none;
+	color: rgba(0, 0, 0, 0.6);
+	text-decoration: none;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+.nav-menu a:after{
+	position:absolute;
+	content:'';
+	bottom:0;
+	left:0;
+	width:0;
+	opacity:0;
+	border:1px solid #19C02C;
+	transition:all 0.5s;
+}
+.nav-menu a.active,
+.nav-menu a:hover{
+	color:#12AD5E;
+	font-weight:bold;
+}
+.nav-menu a.active:after,
+.nav-menu a:hover:after{
+	opacity:1;
+	width:100%;
+	transition:all 0.5s;
+}
+.menu-toggle {
+	display:none;
+}
+.menu-toggle span{
+	position:absolute;
+	top:16px;
+	right:10px;
+}
+.menu-toggle span,
+.menu-toggle span:before,
+.menu-toggle span:after {
+	background: #000;
+	height: 2px;
+	width: 20px;
+	display: block;	
+}
+.menu-toggle span:before,
+.menu-toggle span:after {
+	content: "";
+	position: absolute;
+}
+.menu-toggle span:before {
+	top: -6px;
+}
+
+.menu-toggle span:after {
+	top: 6px;
+}
+
+.toggled span,
+.toggled:hover span {
+	background-color: transparent;
+}
+
+.toggled span:before,
+.toggled span:after {
+	top: 0;
+}
+
+.toggled span:before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.toggled span:after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.blur {    
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);    
+}
+/*右边瀑布流*/
+.page-content{
+	margin-left:270px;
+	width:calc(100% - 270px);
+	clear:both;
+}
+.content{
+	width:100%;
+	min-height:100%;
+	overflow:auto;
+	
+}
+
+.grid{
+	width:100%;
+	text-align:center;
+	padding:10px;
+}
+.grid-item {
+	width:22.5%;
+	margin:10px 1%;
+	background-color:#fff;
+	border-radius: 5px;
+	overflow:hidden;
+	box-shadow:0 0 15px rgba(130,130,130,0.32);
+	
+}
+.grid-item p{
+	padding:5px;
+}
+.grid-item img{
+	width:100%;
+}
+/*页脚*/
+.page-footer{
+	width: 270px;
+	padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.page-footer p{
+	font-size:14px;
+	line-height:20px;
+}
+.text-center{
+	text-align:left;
+}
+
+@media (max-width:767px) {
+	/*菜单栏*/
+	.menu-toggle {
+		position:fixed; 
+		right:5px;
+		top:8px;
+		display:block;
+		width:36px;
+		height:36px;
+		line-height:36px;
+		transition:all .5s;
+	}
+	.page-header {
+		position:fixed;
+		width:100%;
+		height:55px;
+		padding:9px;
+    	background-color: #29a7ef;
+	}
+	.logo{
+		padding:0;
+		font-size:36px;
+		color:#fff;
+	}
+	.nav-menu{
+		visibility:hidden;
+		padding-bottom:20px;
+		position: fixed;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		width: 100%;
+		z-index: 1000;
+		left: 0;
+		right: 0;
+		padding: 20px;
+		opacity:0;
+		transform:translateY(-100%);
+		transition:all 0.2s;
+	}
+	.nav-menu.open{
+		visibility: visible;
+		opacity:1;
+		z-index: 1000;
+		transform:translateY(10px);
+		display:block;
+		transition:all 0.2s;
+	}
+	.nav-menu a{
+		color:#fff;
+	}
+	.menu-toggle span {
+		background:transparent;
+	}
+	.menu-toggle span:before,
+	.menu-toggle span:after {
+		background: #fff;
+	}
+	/*瀑布流*/
+	.page-content{
+		width:100%;
+		margin:0;
+		padding-top:55px;
+	}
+
+	.grid-item{
+		width:40%;
+		margin:10px 3%;
+	}
+	.grid-item--width2 { width: 240px; }
+	/*页脚*/
+	.page-footer{
+		margin-top:100px;
+		width:100%;
+		position:relative;
+		background-color:#f8f8f8;
+	}
+}
